@@ -1,6 +1,7 @@
 "use client";
 import Image from "next/image";
 import { useState } from "react";
+import { googleAnaliticsLogo } from "../../../public/SVG";
 
 export default function Home() {
   const [loading, setLoading] = useState(false);
@@ -60,27 +61,9 @@ Admin
     }
   };
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
-      <div className="flex flex-col items-center justify-center gap-4">
-        <h1 className="text-6xl font-bold text-center text-blue-800 dark:text-white ">
-          Welcome to the website
-        </h1>
-        <p className=" text-center text-blue-300 dark:text-gray-500">
-          Enter your email to receive information about the views of the Test
-          website.
-          <br />
-          Information about page views is processed using the <br />
-          <span className="text-blue-800 dark:text-white ">
-            {" "}
-            Google Analytic API
-          </span>
-        </p>
-        <p></p>
-      </div>
-      <div className="flex flex-col items-center justify-center gap-4">
-      </div>
+    <form className="flex flex-col items-center justify-center gap-14 w-1/2 ">
       <input
-        className="p-2 m-2 border border-gray-300 rounded w-full focus:outline-none focus:ring-2 focus:ring-blue-500 dark:bg-gray-800 dark:text-white max-w-lg"
+        className="p-2 m-2 border border-gray-300 rounded w-full focus:outline-none focus:ring-2 focus:ring-blue-500important dark:bg-gray-800important dark:text-whiteimportant max-w-lg"
         type="email"
         placeholder="Enter your email"
         value={sendingEmail}
@@ -97,6 +80,6 @@ Admin
           ? "Sending..."
           : "Send Email"}
       </button>
-    </main>
+    </form>
   );
 }
